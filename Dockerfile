@@ -1,10 +1,14 @@
 FROM ubuntu:latest
 MAINTAINER Chris Collins <collins.christopher@gmail.com>
 
+RUN apt-get update && apt-get install -y tzdata
+# Testing command: Print the date.  It will be in the timezone set from the compose file.
+CMD date
+
 ENV PKGS git x11vnc wget python python-numpy unzip xvfb curl tar bzip2 runit
 ENV DFPKGS libgtk2.0-0 libglu1-mesa libsdl-image1.2 libsdl-sound1.2 libsdl-ttf2.0-0 libopenal1 net-tools
 ENV NOVNC https://github.com/kanaka/noVNC.git
-ENV DF http://www.bay12games.com/dwarves/df_43_05_linux.tar.bz2
+ENV DF http://www.bay12games.com/dwarves/df_47_04_linux.tar.bz2
 ENV DISPLAY :1
 
 RUN apt-get update
