@@ -69,3 +69,4 @@ You should have received a copy of the GNU General Public License along with thi
 1. `cd DwarfFortressServer`
 1. `sudo docker build -t dwarffortress .` <-- Note the period on the end
 1. `sudo docker run -p 80:6080 -d dwarffortress`
+1. [http://localhost](http://localhost)
